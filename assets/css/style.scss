@@ -1,0 +1,246 @@
+@mixin yellow-button{
+    padding: 13px 30px;
+    background: #cfc91d;
+    color: #000;
+    font-weight: bold;
+}
+
+%text-h1{
+    font-weight: 800;
+        color: #02918c;
+
+}
+
+%input-style{
+    text-align: center;
+    background: transparent;
+    margin: 30px 0px;
+    padding: 12px 0px;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #fff;
+}
+
+
+*{
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,img,a,ul,li{
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+
+}
+body{
+    overflow-x: hidden;
+}
+
+/* commmon css ends*/
+
+/* header part starts*/
+
+.header-part{
+    background: #02918c;
+}
+
+.header-part  .navbar-brand{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.header-part .navbar-brand .text-part{
+    color: #cfc91d;
+}
+
+.header-part .banner-part{
+    background: url(../images/myfolioBanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    h4{
+        padding-top: 210px;
+    }
+    h1{
+        font-size: 70px;
+        letter-spacing: 10px;
+        font-weight: 700;
+    }
+    img{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .y-button{
+        padding-bottom: 325px;
+    }
+    .y-button a{
+       @include yellow-button;
+    }
+
+}
+
+
+
+/* header part ends*/
+
+/*about part starts*/
+
+.aboutme-part .about-items{
+    h1{
+        
+        margin-top: 45px;
+        @extend %text-h1;
+    }
+    p{
+        padding-top: 30px;
+        padding-bottom: 70px;
+        .bolded{
+            font-weight: 800;
+            font-size: 21px;
+        }
+    }
+}
+.aboutme-part .columns .col-md-3, .columns .col-xl-3{
+
+    border-right: 1px solid silver;
+    margin-bottom: 60px;
+    h6{
+        padding-top: 20px;
+        font-weight: 800;
+        color: #7e8287;
+    }
+    
+}
+.aboutme-part .columns .col-md-3:nth-last-child(1), .columns .col-xl-3:nth-last-child(1){
+
+    border-right: none;
+    
+}
+
+/*about part ends*/
+
+/* service part starts*/
+
+.service-part{
+    background: url(../images/services.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1{
+        margin-top: 70px;
+        @extend %text-h1;
+    }
+    h6{
+        padding-top: 12px;
+        font-weight: 800;
+        color: #7e8287;
+    }
+
+
+}
+
+/* service part ends*/
+
+
+
+/* work part starts*/
+.work-part{
+    h1{
+        margin-top: 50px;
+        @extend %text-h1;
+    }
+    .row{
+        .col-md-3{
+
+            .box{
+                display: flex;
+                justify-content: center;
+              img{
+                  height: 100%;
+                  width: 100%;
+              }
+
+              }
+              .box:hover .hovers{
+                  opacity: 1;
+              }
+
+                .hovers{
+                        height: 80%;
+                        width: 80%;
+                        position: absolute;
+                        top: 10%;
+                        opacity: 0;
+                        background: rgba(2,145, 140, 0.7);
+                        h6{
+                            margin-top: 40px;
+                        
+                        }
+                        
+                }
+                    
+            }
+        }
+
+    }
+    
+/* work part ends*/
+
+/*contact part starts*/
+.contact-part{
+    margin-top: 45px;
+    h1{
+        @extend %text-h1;
+    }
+}
+/*contact part ends*/
+
+/*footer part starts*/
+.footer-part{
+
+    background: #0b0b0b;
+    .items{
+        margin-top: 50px;
+        
+        input.input-name{
+            width: 50%;
+            @extend %input-style;
+        }
+        input.input-mail{
+            width: 50%;
+            @extend %input-style;
+        }
+        input.input-massage{
+            width: 70%;
+            @extend %input-style;
+        }
+
+        .submit-button{
+            margin-top: 15px;
+            padding-bottom: 50px;
+        }
+        .submit-button a{
+            @include yellow-button;
+        }
+
+
+
+    }
+
+    .copyright-part{
+        background: #000;
+        p{
+            padding: 18px ;
+        }
+    }
+}
+/*footer part ends*/
